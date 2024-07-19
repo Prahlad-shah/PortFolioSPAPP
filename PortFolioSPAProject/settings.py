@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n=c)sd&=&g@#*t6=$&a5m!5r9_xuf#9s7hwib1crl5p&1v!f6_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -120,6 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     Path.joinpath(BASE_DIR, 'static'),
+    Path.joinpath(BASE_DIR, 'PortFolioSPAPP/Blob_Files'),
+    "/var/www/static/",
 )
 
 # Default primary key field type
